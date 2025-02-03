@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Volume Tangki</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Hitung Volume Air dalam Tangki</h2>
+        <form id="volumeForm">
+            <label for="tank">Pilih Tangki:</label>
+            <select id="tank">
+                <option value="service">Service Tank</option>
+                <option value="demin">Demin Tank</option>
+            </select>
+            <br><br>
+            <label for="height">Masukkan tinggi air (mm):</label>
+            <input type="number" id="height" required>
+            <br><br>
+            <button type="submit">Hitung</button>
+        </form>
+        <h3 id="result"></h3>
+    </div>
+
+    <footer>
+        <p>Create by Muhammad Alfi Syahri</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
